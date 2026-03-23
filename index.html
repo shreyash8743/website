@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyash Kagathara - Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-glass"></div>
+
+    <div class="resume-container">
+
+        <!-- Header Section -->
+        <header class="card header-section">
+            <h1 class="name">Shreyash Kagathara</h1>
+            <p class="role">Software Professional</p>
+        </header>
+
+        <!-- Education Section -->
+        <section class="card">
+            <h2><span class="icon">🎓</span> Education</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>[Degree Name]</h3>
+                    <p class="institution">Dharmsinh Desai University</p>
+                    <div class="meta-info">
+                        <span>📅 Year of Completion: 2029</span>
+                        <span>🎯 Percentage/CGPA: --</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>12th (HSC)</h3>
+                    <p class="institution">[School Name]</p>
+                    <div class="meta-info">
+                        <span>📅 Year: 2024</span>
+                        <span>🎯 Percentage: 89%</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>10th (SSC)</h3>
+                    <p class="institution">[School Name]</p>
+                    <div class="meta-info">
+                        <span>📅 Year: 2019</span>
+                        <span>🎯 Percentage: 80%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="card">
+            <h2><span class="icon">⚡</span> Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-badge">Communication</span>
+                <span class="skill-badge">MS Office / Excel</span>
+                <span class="skill-badge">Python / Java / c++</span>
+            </div>
+        </section>
+
+        <!-- Achievements & Personal Info Section -->
+        <div class="two-column">
+            <section class="card half">
+                <h2><span class="icon">🏆</span> Achievements</h2>
+                <ul class="duties">
+                    <li>Successfully completed Higher Secondary Education with 89%.</li>
+                    <li>Actively learning programming languages like Python and Java.</li>
+                    <li>Participated in college technical and academic activities.</li>
+                    <li>Developed basic projects using HTML and CSS.</li>
+                    <li>Good communication and teamwork skills.</li>
+                </ul>
+            </section>
+
+            <section class="card half">
+                <h2><span class="icon">👤</span> Personal Details</h2>
+                <ul class="personal-list">
+                    <li><strong>Date of Birth:</strong> [DD/MM/YYYY]</li>
+                    <li><strong>Languages Known:</strong> Gujarati, Hindi, English</li>
+                    <li><strong>Hobbies:</strong> Coding, Learning New Technologies, Reading, Problem Solving</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Declaration Section -->
+        <section class="card declaration">
+            <h2>Declaration</h2>
+            <p>
+                I hereby declare that the information provided above is true, complete, and accurate to the best of my
+                knowledge and belief.
+                I take full responsibility for the authenticity of the details mentioned in this resume.
+            </p>
+
+            <div class="signature-area">
+                <div class="details">
+                    <p><strong>Date:</strong> [Current Date]</p>
+                    <p><strong>Place:</strong> Junagadh, Gujarat</p>
+                </div>
+                <div class="signature">
+                    <p class="sign">Shreyash Kagathara</p>
+                    <p class="label">Signature</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>
